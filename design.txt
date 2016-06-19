@@ -1,0 +1,24 @@
+Mission params:
+- ==Settings==
+- Starting time
+- Enemy Faction
+- Enemy scaling (auto,off,x1-5)
+- QRF (light,medium,heavy,surprise) [State machine]
+- Enemy Patrols (yes, no) [UPSMON]
+
+
+Mission Types:
+- Assassinate HVT in a city (have him walk in the city or in a building)
+- Assassinate Officer in a city (have him patrol the area)
+- Assassinate Officer in a camp (have him with the nice stuff)
+- Destroy AT camp [next to city, open, hilltop]
+- Destroy AA camp [next to city, open, hilltop]
+- Destroy Mortars camp [next to city, open, hilltop]
+- Destroy Artillery [next to city, open, hilltop]
+- Destroy Anti-Air [next to city, open, hilltop]
+- Destroy Anti-Air artillery [next to city, open, hilltop]
+- Clear Camp
+- Destroy Weapons Cache in a city (regular boxes using house pos)
+- Destroy Weapons Cache in a camp (Camoboxes)
+- Sabotage vehicle pool near a city (Needs a composition)
+- Destroy radar/antenna (needs a composition)

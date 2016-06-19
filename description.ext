@@ -1,0 +1,79 @@
+class cfgFunctions
+{
+  class SL
+  {
+    class common
+    {
+      class checkPos{};
+      class createGroup{};
+      class deg2compass{};
+      class findHouse{};
+      class findStart{};
+      class nearestCity{};
+      class nearWater{};
+      class randLoc{};
+      class randPos{};
+      class spawnPatrol{};
+    };
+  };
+};
+
+class Params
+{
+
+  class param_banner_settings
+  {
+    title = "== Settings ==";
+    values[] = {0};
+    texts[] = {""};
+  };
+
+  class param_objectives
+  {
+    title = "Number of objectives";
+    values[] = {1,2,3,4,5,6,7,8,9};
+    default = 5;
+  }
+
+  class param_starting_time
+  {
+    title = "Starting Time";
+    values[] = {0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23};
+    texts[] = {"0:00","1:00","2:00","3:00","4:00","5:00","6:00","7:00","8:00","9:00","10:00","11:00","12:00","13:00","14:00","15:00","16:00","17:00","18:00","19:00","20:00","21:00","22:00","23:00"};
+    default = 8;
+  };
+
+  class param_enemy_faction
+  {
+    title = "Enemy Faction";
+    values[] = {1,2,3,4};
+    texts[] = {"CSAT","Guerilla (REDFOR)","AAF","Guerilla (GREENFOR)"};
+    default = 3;
+    code = "param_enemy_faction = %1";
+  };
+
+  class param_enemy_scaling
+  {
+    title = "Enemy Scaling (not implemented)";
+    values[] = {0,4,3,2,1};
+    texts[] = {"Off","Reasonable","Challenging","Why are we even trying?","Fuck your FPS"};
+    default = 1;
+  };
+
+  class param_qrf
+  {
+    title = "QRF (not implemented)";
+    values[] = {0,1,2,3,4};
+    texts[] = {"Off","Light","Medium","Heavy","Fuck your FPS"};
+    default = 1;
+  };
+
+  class param_patrols
+  {
+    title = "Enemy Patrols (not implemented)";
+    values[] = {0,1};
+    texts[] = {"No", "Yes"};
+    default = 1;
+  };
+
+};
