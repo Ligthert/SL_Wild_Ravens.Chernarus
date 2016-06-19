@@ -1,41 +1,15 @@
-private ["_pos_last","_found","_post_new","_marker"];
+_locs = nearestLocations [getpos player, ["NameVillage","NameCity","NameCityCapital","Hill"], 300];
 
-_pos_last = _this select 0;
+{
+  //diag_log _x;
+  //diag_log name _x
+  //diag_log getText( configfile >> "CfgWorlds" >> worldName >> "Names" >> _x >> "name" );
 
-nodes = [];
-nodes set [0,_pos_last];
+  diag_log (text _x);
+  diag_log (size _x);
+  diag_log (type _x);
+  diag_log (locationPosition  _x);
 
-checks = [];
-checks set [0, "Land_HelipadEmpty_F" createVehicleLocal _pos_last];
+} forEach _locs;
 
-for "_node" from 1 to 5 do {
-
-  _found = 0;
-  _pos_new = [];
-
-  while { _found == 0 } do {
-
-    _savePos = 0;
-    while { _savePos == 0 } do {
-
-      _savePos = 1;
-
-      _pos_new = [_pos_last, random [800,1000,1200], random 360 ] call BIS_fnc_relPos;
-
-      {
-        if ( (_x distance _pos_new) < 800  ) then { _savePos = 0 };
-      } foreach checks;
-
-    };
-
-    if ( [_pos_new] call SL_fnc_checkPos ) then {
-      _found = 1;
-      nodes set [count nodes, _pos_new];
-      checks set [count checks, "Land_HelipadEmpty_F" createVehicleLocal _pos_new];
-      _pos_last = _pos_new;
-      _marker = [(format["marker%1",random 999999]),_pos_new,"ICON",[1,1],"TYPE:","mil_dot","COLOR:","ColorGreen","TEXT:", str _node ] call CBA_fnc_createMarker;
-    };
-
-  };
-
-};
+// configfile >> "CfgWorlds" >> "Chernarus" >> "Names" >> "city_Chernogorsk"
