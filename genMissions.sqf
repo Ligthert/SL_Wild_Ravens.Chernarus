@@ -1,5 +1,8 @@
 private ["_pos_start"];
 
+// Load compositions
+#include "compositions.sqf";
+
 // Search for a random pos.
 _pos_start = call SL_fnc_findstart;
 

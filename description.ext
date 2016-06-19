@@ -12,6 +12,7 @@ class cfgFunctions
       class deg2compass{};
       class findHouse{};
       class findStart{};
+      class loadCompositions{};
       class nearestCity{};
       class nearWater{};
       class randLoc{};
