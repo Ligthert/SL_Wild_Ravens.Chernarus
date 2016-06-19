@@ -2,10 +2,13 @@ class cfgFunctions
 {
   class SL
   {
+
     class common
     {
       class checkPos{};
+      class createCityMarker{};
       class createGroup{};
+      class createMarker{};
       class deg2compass{};
       class findHouse{};
       class findStart{};
@@ -15,6 +18,7 @@ class cfgFunctions
       class randPos{};
       class spawnPatrol{};
     };
+
   };
 };
 
