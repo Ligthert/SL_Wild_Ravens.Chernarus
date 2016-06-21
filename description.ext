@@ -9,6 +9,7 @@ class cfgFunctions
       class createCityMarker{};
       class createGroup{};
       class createMarker{};
+      class createTask{};
       class deg2compass{};
       class findHouse{};
       class findStart{};
@@ -60,9 +61,9 @@ class Params
   class param_enemy_scaling
   {
     title = "Enemy Scaling (not implemented)";
-    values[] = {0,4,3,2,1};
-    texts[] = {"Off","Reasonable","Challenging","Why are we even trying?","Fuck your FPS"};
-    default = 1;
+    values[] = {0,6,5,4,3,2,1};
+    texts[] = {"Off","Are you even trying?","Light","Reasonable","Challenging","Why are we even trying?","Fuck your FPS!"};
+    default = 4;
   };
 
   class param_qrf
