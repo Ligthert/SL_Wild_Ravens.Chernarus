@@ -38,9 +38,43 @@ _counter = 0;
 
   if (_counter != 0) then {
     // Check if there is a location nearby and find a fitting scenario.
+    _locs = nearestLocations [getpos player, ["NameVillage","NameCity","NameCityCapital","Hill"], 300];
+    _loc = _locs call BIS_fnc_selectRandom;
+    // if (!isNull _loc) then { _near = type _loc; };
+    _near = "";
+    _obj_pos = _x;
+
     // Select random scenario
+    _missions = [];
+
+    if (_near == "") then {
+      _missions = ["camp_officer","camp_clear","camp_ammo"];
+    } else {
+
+      if (_near == "Hill") then {
+        _missions = ["camp_officer","camp_clear","camp_ammo"];
+        _ojb_pos = locationPosition _loc;
+      };
+
+      if ( [_near,"Name"] call CBA_fnc_find != -1 ) then {
+        _missions = ["camp_officer","camp_clear","camp_ammo"];
+      };
+
+    };
     // Run scenario script
+
+    // _mission = _missions call BIS_fnc_selectRandom;
+
+    // if (_mission == "camp_officer") then { [_obj_pos] call SL_fnc_taskCampOfficer; };
+    // if (_mission == "camp_clear") then { [_obj_pos] call SL_fnc_taskCampClear; };
+    // if (_mission == "camp_ammo") then { [_obj_pos] call SL_fnc_taskCampAmmo; };
+
+    // Push this to the background because waitUntil{} and functions
+    [_obj_pos] execVM "objectives\taskCampOfficer.sqf";
+
     // Create trigger to spawn patrols (UPSMON) to save FPS.
+
+
   };
 
   // Next!
