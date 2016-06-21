@@ -12,7 +12,7 @@ _pos_start = call SL_fnc_findstart;
 {
     _x setPos ([getMarkerPos "respawn", 5, random 360] call BIS_fnc_relPos);
     _x setDir ( ( _x getDir _pos_start)-180 );
-} forEach (call BIS_fnc_listPlayers);
+} forEach (allPlayers);
 
 // TODO: Give the poor vehicle a nice loadout
 car1 setPos ([getMarkerPos "respawn", 10, random 360] call BIS_fnc_relPos);
@@ -21,7 +21,7 @@ car1 setDir ( ( car1 getDir _pos_start)-180 );
 
 // We are done.. inform clients.
 sl_wr_init = "done";
-publicVariable sl_wr_init;
+publicVariable "sl_wr_init";
 
 // Find locations for missions.
 [_pos_start] call SL_fnc_randLoc;

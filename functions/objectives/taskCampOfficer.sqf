@@ -23,13 +23,10 @@ _tgt = _grp createUnit [faction_officers call BIS_fnc_selectRandom, _pos, [], 0,
 _marker = [_pos] call SL_fnc_createMarker;
 
 // Create Task and spam to clients
-
-sleep 10;
-
-
 _description = "Kill a dude";
 _title = "Assassinate Officer";
 _marker_name = "Assassinate";
+hint "Firing off Task";
 _tsk = [[_description,_title,_marker_name _marker],"SL_fnc_createTask",true,false] call BIS_fnc_MP;
 
 /*
