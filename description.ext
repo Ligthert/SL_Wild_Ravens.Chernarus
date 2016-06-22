@@ -60,7 +60,7 @@ class Params
 
   class param_enemy_scaling
   {
-    title = "Enemy Scaling (not implemented)";
+    title = "Enemy Scaling";
     values[] = {0,6,5,4,3,2,1};
     texts[] = {"Off","Are you even trying?","Light","Reasonable","Challenging","Why are we even trying?","Fuck your FPS!"};
     default = 4;
@@ -76,7 +76,7 @@ class Params
 
   class param_patrols
   {
-    title = "Enemy Patrols (not implemented)";
+    title = "Enemy Patrols";
     values[] = {0,1};
     texts[] = {"No", "Yes"};
     default = 1;
