@@ -508,8 +508,9 @@ class Mission
 			flags=4;
 			class Attributes
 			{
+				init="[ " \n " this, " \n " [""Guerilla_09"",1],  " \n " [""HideBumper2"",0,""HideBackpacks"",0,""HideDoor1"",1,""HideDoor2"",1,""HideGlass2"",1,""HideDoor3"",1,""Proxy"",0,""Destruct"",0] " \n "] call BIS_fnc_initVehicle; " \n "";
 				name="car1";
-				textures="Guerilla_04";
+				textures="Guerilla_09";
 			};
 			id=13;
 			type="I_G_Offroad_01_F";
