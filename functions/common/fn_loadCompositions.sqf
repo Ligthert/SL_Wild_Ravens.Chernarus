@@ -5,7 +5,6 @@ private ["_list","_pos","_pos_x","_pos_y","_pos_z","_arr","_obj","_dir"];
 _pos = _this select 0;
 _list = _this select 1;
 
-
 {
 	_pos_x = (_pos select 0) + ((_x select 1) select 0);
 	_pos_y = (_pos select 1) + ((_x select 1) select 1);

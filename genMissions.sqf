@@ -1,7 +1,7 @@
 private ["_pos_start"];
 
 // Load compositions
-#include "compositions.sqf";
+#include "compositions\officers.sqf"
 
 // Search for a random pos.
 _pos_start = call SL_fnc_findstart;
@@ -106,7 +106,7 @@ if ("param_patrols" call BIS_fnc_getParamValue == 1 ) then {
 
   _counter = 0;
   {
-    if (_counter !=0) then {
+    if (_counter != 0) then {
       _tmp_x = (_x select 0);
       if ( _tmp_x > _largest_x ) then { _largest_x = _tmp_x; };
       if ( _tmp_x < _smallest_x ) then { _smallest_x = _tmp_x; };
@@ -118,7 +118,7 @@ if ("param_patrols" call BIS_fnc_getParamValue == 1 ) then {
 
   _counter = 0;
   {
-    if (_counter !=0) then {
+    if (_counter != 0) then {
       _tmp_y = (_x select 1);
       if ( _tmp_y > _largest_y ) then { _largest_y = _tmp_y; };
       if ( _tmp_y < _smallest_y ) then { _smallest_y = _tmp_y; };
@@ -129,8 +129,8 @@ if ("param_patrols" call BIS_fnc_getParamValue == 1 ) then {
   _avg_y = (_all_y/((count nodes)-1));
 
   _marker_pos = [_avg_x,_avg_y];
-  _size_x = _largest_x - _smallest_x;
-  _size_y = _largest_y - _smallest_y;
+  _size_x = ((_largest_x - _smallest_x)/2)+100;
+  _size_y = ((_largest_y - _smallest_y)/2)+100;
   _marker = ["markername", _marker_pos, "Rectangle", [_size_x, _size_y]] call CBA_fnc_createMarker;
 
 
