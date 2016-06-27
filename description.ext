@@ -13,6 +13,7 @@ class cfgFunctions
       class deg2compass{};
       class findHouse{};
       class findStart{};
+      class healthObjects{};
       class loadCompositions{};
       class nearestCity{};
       class nearWater{};

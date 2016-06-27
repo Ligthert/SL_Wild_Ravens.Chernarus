@@ -2,6 +2,8 @@ private ["_pos_start"];
 
 // Load compositions
 #include "compositions\officers.sqf"
+#include "compositions\camps.sqf"
+#include "compositions\compounds.sqf"
 
 // Search for a random pos.
 _pos_start = call SL_fnc_findstart;
@@ -9,10 +11,13 @@ _pos_start = call SL_fnc_findstart;
 
 // Move units + gear
 "respawn" setMarkerPos _pos_start;
+
+/*
 {
     _x setPos ([getMarkerPos "respawn", 5, random 360] call BIS_fnc_relPos);
     _x setDir ( ( _x getDir _pos_start) );
 } forEach (allPlayers);
+*/
 
 // TODO: Give the poor vehicle a nice loadout
 car1 setPos ([getMarkerPos "respawn", 10, random 360] call BIS_fnc_relPos);
@@ -27,9 +32,7 @@ publicVariable "sl_wr_init";
 [_pos_start] call SL_fnc_randLoc;
 
 
-{
-  _marker = [(format["marker%1",random 999999]),_x,"ICON",[1,1],"TYPE:","mil_dot","COLOR:","ColorGreen" ] call CBA_fnc_createMarker;
-} forEach nodes;
+// { _marker = [(format["marker%1",random 999999]),_x,"ICON",[1,1],"TYPE:","mil_dot","COLOR:","ColorGreen" ] call CBA_fnc_createMarker; } forEach nodes;
 
 
 // Create actual missions.
@@ -45,8 +48,9 @@ _counter = 0;
     _obj_pos = _x;
 
     // Select random scenario
-    _missions = [];
+    //_missions = [];
 
+    /*
     if (_near == "") then {
       _missions = ["camp_officer","camp_clear","camp_ammo"];
     } else {
@@ -61,16 +65,28 @@ _counter = 0;
       };
 
     };
+    */
+
     // Run scenario script
 
-    // _mission = _missions call BIS_fnc_selectRandom;
+    _missions = ["camp_officer","camp_clear","camp_cache","compound_aa","compound_at"];
 
-    // if (_mission == "camp_officer") then { [_obj_pos] call SL_fnc_taskCampOfficer; };
-    // if (_mission == "camp_clear") then { [_obj_pos] call SL_fnc_taskCampClear; };
-    // if (_mission == "camp_ammo") then { [_obj_pos] call SL_fnc_taskCampAmmo; };
+    _mission = _missions call BIS_fnc_selectRandom;
+
+    if (_mission == "camp_officer") then { [_obj_pos] execVM "objectives\taskCampOfficer.sqf"; };
+    if (_mission == "camp_clear") then { [_obj_pos] execVM "objectives\taskCampClear.sqf"; };
+    if (_mission == "camp_ammo") then { [_obj_pos] execVM "objectives\taskCampCache.sqf"; };
+    if (_mission == "compound_aa") then { [_obj_pos] execVM "objectives\taskCompoundAA.sqf"; };
+    if (_mission == "compound_at") then { [_obj_pos] execVM "objectives\taskCompoundAT.sqf"; };
+
 
     // Push this to the background because waitUntil{} and functions
-    [_obj_pos] execVM "objectives\taskCampOfficer.sqf";
+    //[_obj_pos] execVM "objectives\taskCampOfficer.sqf";
+    //[_obj_pos] execVM "objectives\taskCampClear.sqf";
+    //[_obj_pos] execVM "objectives\taskCampCache.sqf";
+    //[_obj_pos] execVM "objectives\taskCompoundAA.sqf";
+    //[_obj_pos] execVM "objectives\taskCompoundAT.sqf";
+    //[_obj_pos] execVM "objectives\taskCompoundMortar.sqf";
 
     // Create trigger to spawn patrols (UPSMON) to save FPS.
     _trg = createTrigger ["EmptyDetector",_obj_pos];
@@ -129,8 +145,8 @@ if ("param_patrols" call BIS_fnc_getParamValue == 1 ) then {
   _avg_y = (_all_y/((count nodes)-1));
 
   _marker_pos = [_avg_x,_avg_y];
-  _size_x = ((_largest_x - _smallest_x)/2)+100;
-  _size_y = ((_largest_y - _smallest_y)/2)+100;
+  _size_x = ((_largest_x - _smallest_x)/2)+200;
+  _size_y = ((_largest_y - _smallest_y)/2)+200;
   _marker = ["markername", _marker_pos, "Rectangle", [_size_x, _size_y]] call CBA_fnc_createMarker;
 
 
@@ -145,3 +161,7 @@ if ("param_patrols" call BIS_fnc_getParamValue == 1 ) then {
   };
 
 };
+
+sleep 60;
+
+execVM "trackRespawn.sqf";
