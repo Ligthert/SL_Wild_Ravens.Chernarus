@@ -176,7 +176,7 @@ class Mission
 {
 	class Intel
 	{
-		briefingName="[SL] Wild Ravens";
+		briefingName="[SL] Wild Ravens (v0.2)";
 		overviewText="Dynamic Campaign in Chernarus";
 		resistanceWest=0;
 		timeOfChanges=1800.0002;
