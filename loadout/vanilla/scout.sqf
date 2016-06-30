@@ -1,5 +1,3 @@
-comment "Exported from Arsenal by Sacha";
-
 comment "Remove existing items";
 removeAllWeapons player;
 removeAllItems player;
