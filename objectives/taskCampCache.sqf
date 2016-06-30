@@ -42,5 +42,8 @@ sleep (random 10);
 // Mark the task as done
 [[_tsk,"SUCCEEDED",true],"BIS_fnc_taskSetState",true,false] call BIS_fnc_MP;
 
+// Cram tasks in the task array
+tasks set [count tasks,_tsk];
+
 // Destroy marker
 deleteMarker _marker;

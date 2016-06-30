@@ -4,8 +4,6 @@ call compile preprocessFileLineNumbers "scripts\Init_UPSMON.sqf";
 mapSize = getNumber (configfile >> "CfgWorlds" >> worldName >> "mapSize");
 mapCenter = [mapSize/2,mapSize/2];
 
-nodes = [];
-
 #include "enemyUnits.sqf";
 
 // TODO: What about the HC slot?
