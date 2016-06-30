@@ -695,7 +695,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="[ " \n " this, " \n " [""Guerilla_09"",1],  " \n " [""HideBumper2"",0,""HideBackpacks"",0,""HideDoor1"",1,""HideDoor2"",1,""HideGlass2"",1,""HideDoor3"",1,""Proxy"",0,""Destruct"",0] " \n "] call BIS_fnc_initVehicle; " \n "";
+				init="[ this, [""Guerilla_09"",1], [""HideBumper2"",0,""HideBackpacks"",0,""HideDoor1"",1,""HideDoor2"",1,""HideGlass2"",1,""HideDoor3"",1,""Proxy"",0,""Destruct"",0] " \n "] call BIS_fnc_initVehicle; " \n "null = [this] execVM ""loadout\car.sqf"";";
 				name="car1";
 				textures="Guerilla_09";
 			};
@@ -719,7 +719,7 @@ class Mission
 									"STRING"
 								};
 							};
-							value="[[[[""launch_NLAW_F""],[4]],[[""30Rnd_65x39_caseless_mag"",""DemoCharge_Remote_Mag"",""SatchelCharge_Remote_Mag"",""NLAW_F""],[32,8,4,8]],[[""FirstAidKit""],[16]],[[],[]]],false]";
+							value="[[[[],[]],[[],[]],[[],[]],[[],[]]],true]";
 						};
 					};
 				};
