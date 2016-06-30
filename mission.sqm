@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={1243.6543,413.32251,14036.228};
-		dir[]={0.8027581,-0.41637954,0.42714712};
-		up[]={0.36764541,0.90912312,0.19562519};
-		aside[]={0.46979508,-3.307141e-007,-0.88291174};
+		pos[]={1314.724,426.17392,14062.868};
+		dir[]={-0.72059172,-0.69223517,-0.042536709};
+		up[]={-0.69103676,0.72162068,-0.040793579};
+		aside[]={-0.058935191,-4.1039311e-007,0.99838501};
 	};
 };
 binarizationWanted=0;
@@ -213,26 +213,50 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={1277.1407,398.74991,14052.32};
-						angles[]={0,4.190073,0};
+						position[]={1277.141,398.74988,14052.319};
+						angles[]={0,4.1900644,0};
 					};
 					side="West";
 					flags=7;
 					class Attributes
 					{
 						rank="SERGEANT";
+						init="null = this execVM ""loadout\scout.sqf"";";
 						isPlayer=1;
 					};
 					id=1;
 					type="B_recon_TL_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1.03;
+								};
+							};
+						};
+						nAttributes=1;
+					};
 				};
 				class Item1
 				{
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={1278.9796,399.15756,14059.148};
-						angles[]={0,4.190073,0};
+						position[]={1278.98,399.15759,14059.148};
+						angles[]={0,4.1900644,0};
 					};
 					side="West";
 					flags=5;
@@ -240,65 +264,160 @@ class Mission
 					{
 						skill=0.44999999;
 						rank="CORPORAL";
+						init="null = this execVM ""loadout\marksman.sqf"";";
 						isPlayable=1;
 					};
 					id=2;
 					type="B_recon_M_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.95999998;
+								};
+							};
+						};
+						nAttributes=1;
+					};
 				};
 				class Item2
 				{
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={1283.9685,399.1506,14050.481};
-						angles[]={0,4.190073,0};
+						position[]={1283.969,399.1506,14050.481};
+						angles[]={0,4.1900644,0};
 					};
 					side="West";
 					flags=5;
 					class Attributes
 					{
 						skill=0.40000001;
+						init="null = this execVM ""loadout\medic.sqf"";";
 						isPlayable=1;
 					};
 					id=3;
 					type="B_recon_medic_F";
-					atlOffset=3.0517578e-005;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.98000002;
+								};
+							};
+						};
+						nAttributes=1;
+					};
 				};
 				class Item3
 				{
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={1280.8185,399.82352,14065.976};
-						angles[]={0,4.190073,0};
+						position[]={1280.818,399.82355,14065.976};
+						angles[]={0,4.1900644,0};
 					};
 					side="West";
 					flags=5;
 					class Attributes
 					{
 						skill=0.40000001;
+						init="null = this execVM ""loadout\scout.sqf"";";
 						isPlayable=1;
 					};
 					id=4;
 					type="B_recon_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1.03;
+								};
+							};
+						};
+						nAttributes=1;
+					};
 				};
 				class Item4
 				{
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={1290.7963,399.54721,14048.643};
-						angles[]={0,4.190073,0};
+						position[]={1290.796,399.54718,14048.643};
+						angles[]={0,4.1900644,0};
 					};
 					side="West";
 					flags=5;
 					class Attributes
 					{
 						skill=0.40000001;
+						init="null = this execVM ""loadout\at.sqf"";";
 						isPlayable=1;
 					};
 					id=5;
 					type="B_recon_LAT_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1.02;
+								};
+							};
+						};
+						nAttributes=1;
+					};
 				};
 				class Item5
 				{
@@ -306,17 +425,41 @@ class Mission
 					class PositionInfo
 					{
 						position[]={1297.624,399.9212,14046.804};
-						angles[]={0,4.190073,0};
+						angles[]={0,4.1900644,0};
 					};
 					side="West";
 					flags=5;
 					class Attributes
 					{
 						skill=0.40000001;
+						init="null = this execVM ""loadout\demspec.sqf"";";
 						isPlayable=1;
 					};
 					id=7;
 					type="B_recon_exp_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.99000001;
+								};
+							};
+						};
+						nAttributes=1;
+					};
 				};
 				class Item6
 				{
@@ -332,6 +475,7 @@ class Mission
 					{
 						skill=0.44999999;
 						rank="CORPORAL";
+						init="null = this execVM ""loadout\demspec.sqf"";";
 						isPlayable=1;
 					};
 					id=17;
@@ -373,6 +517,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.40000001;
+						init="null = this execVM ""loadout\at.sqf"";";
 						isPlayable=1;
 					};
 					id=18;
