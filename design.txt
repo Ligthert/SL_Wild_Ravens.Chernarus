@@ -1,10 +1,13 @@
 Mission params:
 - ==Settings==
+- Debug [No*, Yes]
+- Amount of missions
 - Starting time
 - Enemy Faction
 - Enemy scaling (auto,off,x1-5)
-- QRF (light,medium,heavy,surprise) [State machine]
-- Enemy Patrols (yes, no) [UPSMON]
+- Enemy QRF (light,medium,heavy,surprise) [State machine]
+- Enemy Patrols ( no, infantry only, infantry+soft-skin, infantry+soft-skin+light-armoured ) [UPSMON]
+- Enemy gear (  No change*, No NVG, Add Flashlights, Force Flashlights on )
 
 
 Mission Types:
