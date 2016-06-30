@@ -42,9 +42,6 @@ murshun_easywayout_canSuicide = true;
 // Because we want to start with the weapon lowered
 player switchMove "AmovPercMstpSrasWrflDnon_AmovPercMstpSlowWrflDnon";
 
-// Start with Earbuds in your ear in case you run ACE:
-player setVariable ["ACE_hasEarPlugsIn", true, true];
-
 // Disable saving ever.
 enableSaving [false, false];
 
