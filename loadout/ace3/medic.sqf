@@ -1,5 +1,3 @@
-comment "Exported from Arsenal by Sacha";
-
 comment "Remove existing items";
 removeAllWeapons player;
 removeAllItems player;
@@ -12,20 +10,25 @@ removeGoggles player;
 
 comment "Add containers";
 player forceAddUniform "U_B_CombatUniform_mcam_worn";
-for "_i" from 1 to 3 do {player addItemToUniform "30Rnd_65x39_caseless_mag";};
+for "_i" from 1 to 4 do {player addItemToUniform "ACE_fieldDressing";};
+for "_i" from 1 to 2 do {player addItemToUniform "ACE_morphine";};
+player addItemToUniform "ACE_Flashlight_XL50";
+player addItemToUniform "ACE_MapTools";
+for "_i" from 1 to 2 do {player addItemToUniform "ACE_30Rnd_65x39_caseless_green_mag_Tracer_Dim";};
 player addVest "V_TacVest_oli";
 player addItemToVest "SmokeShell";
 player addItemToVest "HandGrenade";
-for "_i" from 1 to 3 do {player addItemToVest "30Rnd_65x39_caseless_mag";};
 for "_i" from 1 to 3 do {player addItemToVest "16Rnd_9x21_Mag";};
+for "_i" from 1 to 3 do {player addItemToVest "ACE_30Rnd_65x39_caseless_green_mag_Tracer_Dim";};
 player addBackpack "B_AssaultPack_rgr";
-for "_i" from 1 to 2 do {player addItemToBackpack "FirstAidKit";};
-player addItemToBackpack "Medikit";
+for "_i" from 1 to 4 do {player addItemToBackpack "ACE_epinephrine";};
+for "_i" from 1 to 2 do {player addItemToBackpack "ACE_bloodIV";};
+for "_i" from 1 to 16 do {player addItemToBackpack "ACE_fieldDressing";};
+for "_i" from 1 to 8 do {player addItemToBackpack "ACE_morphine";};
 player addItemToBackpack "Chemlight_green";
 for "_i" from 1 to 2 do {player addItemToBackpack "MiniGrenade";};
 for "_i" from 1 to 2 do {player addItemToBackpack "SmokeShell";};
-for "_i" from 1 to 2 do {player addItemToBackpack "30Rnd_65x39_caseless_mag";};
-for "_i" from 1 to 2 do {player addItemToBackpack "30Rnd_65x39_caseless_mag_Tracer";};
+for "_i" from 1 to 4 do {player addItemToBackpack "ACE_30Rnd_65x39_caseless_green_mag_Tracer_Dim";};
 player addHeadgear "H_HelmetB_snakeskin";
 player addGoggles "G_Balaclava_oli";
 

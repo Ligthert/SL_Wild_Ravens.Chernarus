@@ -1,5 +1,3 @@
-comment "Exported from Arsenal by Sacha";
-
 comment "Remove existing items";
 removeAllWeapons player;
 removeAllItems player;
@@ -12,20 +10,21 @@ removeGoggles player;
 
 comment "Add containers";
 player forceAddUniform "U_B_CombatUniform_mcam_worn";
-for "_i" from 1 to 3 do {player addItemToUniform "30Rnd_65x39_caseless_mag";};
+for "_i" from 1 to 6 do {player addItemToUniform "ACE_fieldDressing";};
+for "_i" from 1 to 2 do {player addItemToUniform "ACE_morphine";};
+player addItemToUniform "ACE_Flashlight_XL50";
+player addItemToUniform "ACE_MapTools";
+for "_i" from 1 to 3 do {player addItemToUniform "ACE_30Rnd_65x39_caseless_green_mag_Tracer_Dim";};
 player addVest "V_TacVest_oli";
 player addItemToVest "SmokeShell";
-player addItemToVest "HandGrenade";
-for "_i" from 1 to 3 do {player addItemToVest "30Rnd_65x39_caseless_mag";};
 for "_i" from 1 to 3 do {player addItemToVest "16Rnd_9x21_Mag";};
+player addItemToVest "HandGrenade";
+for "_i" from 1 to 3 do {player addItemToVest "ACE_30Rnd_65x39_caseless_green_mag_Tracer_Dim";};
 player addBackpack "B_AssaultPack_rgr";
-player addItemToBackpack "FirstAidKit";
 player addItemToBackpack "Chemlight_green";
 for "_i" from 1 to 2 do {player addItemToBackpack "MiniGrenade";};
 for "_i" from 1 to 2 do {player addItemToBackpack "SmokeShell";};
-for "_i" from 1 to 3 do {player addItemToBackpack "30Rnd_65x39_caseless_mag";};
-for "_i" from 1 to 2 do {player addItemToBackpack "30Rnd_65x39_caseless_mag_Tracer";};
-player addItemToBackpack "NLAW_F";
+for "_i" from 1 to 6 do {player addItemToBackpack "ACE_30Rnd_65x39_caseless_green_mag_Tracer_Dim";};
 player addHeadgear "H_HelmetB_snakeskin";
 player addGoggles "G_Balaclava_oli";
 
@@ -46,7 +45,7 @@ player linkItem "ItemCompass";
 player linkItem "ItemWatch";
 player linkItem "ItemRadio";
 player linkItem "ItemGPS";
-player linkItem "NVGoggles_OPFOR";
+player linkItem "ACE_NVG_Wide";
 
 comment "Set identity";
 [player,"MANW"] call bis_fnc_setUnitInsignia;

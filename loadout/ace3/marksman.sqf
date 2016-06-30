@@ -10,17 +10,23 @@ removeGoggles player;
 
 comment "Add containers";
 player forceAddUniform "U_B_CombatUniform_mcam_worn";
-for "_i" from 1 to 3 do {player addItemToUniform "20Rnd_762x51_Mag";};
+for "_i" from 1 to 4 do {player addItemToUniform "ACE_fieldDressing";};
+player addItemToUniform "ACE_morphine";
+player addItemToUniform "ACE_morphine";
+player addItemToUniform "ACE_Flashlight_XL50";
+player addItemToUniform "ACE_MapTools";
+for "_i" from 1 to 2 do {player addItemToUniform "ACE_20Rnd_762x51_Mag_Tracer_Dim";};
 player addVest "V_TacVest_oli";
+player addItemToVest "ACE_DAGR";
 player addItemToVest "SmokeShell";
 player addItemToVest "HandGrenade";
 for "_i" from 1 to 3 do {player addItemToVest "16Rnd_9x21_Mag";};
-for "_i" from 1 to 4 do {player addItemToVest "20Rnd_762x51_Mag";};
+for "_i" from 1 to 4 do {player addItemToVest "ACE_20Rnd_762x51_Mag_Tracer_Dim";};
 player addBackpack "B_AssaultPack_rgr";
-player addItemToBackpack "FirstAidKit";
 player addItemToBackpack "Chemlight_green";
 for "_i" from 1 to 2 do {player addItemToBackpack "MiniGrenade";};
 for "_i" from 1 to 2 do {player addItemToBackpack "SmokeShell";};
+for "_i" from 1 to 3 do {player addItemToBackpack "ACE_20Rnd_762x51_Mag_Tracer_Dim";};
 player addHeadgear "H_HelmetB_snakeskin";
 player addGoggles "G_Balaclava_oli";
 
@@ -32,7 +38,7 @@ player addPrimaryWeaponItem "optic_Hamr";
 player addPrimaryWeaponItem "bipod_01_F_blk";
 player addWeapon "hgun_P07_F";
 player addHandgunItem "muzzle_snds_L";
-player addWeapon "Rangefinder";
+player addWeapon "ACE_Vector";
 
 comment "Add items";
 player linkItem "ItemMap";
