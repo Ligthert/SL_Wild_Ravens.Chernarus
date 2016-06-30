@@ -1,5 +1,3 @@
-cutText ["Loading...","BLACK",0];
-
 call compile preprocessFileLineNumbers "scripts\Init_UPSMON.sqf";
 
 // Global stuff.
@@ -55,7 +53,4 @@ enableSaving [false, false];
 // Fuck you
 enableSentences false;
 
-sl_wr_init = "none";
-waitUntil { sl_wr_init == "done" };
-[getMarkerPos "respawn", 5, random 360] call BIS_fnc_relPos;
-cutText ["","BLACK IN",30,true];
+// [getMarkerPos "respawn", 5, random 360] call BIS_fnc_relPos;

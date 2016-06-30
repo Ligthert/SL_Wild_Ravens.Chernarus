@@ -7,7 +7,7 @@ while {_found == 0} do {
 
 _pos_rnd = call SL_fnc_randPos;
 
-_result = _pos_rnd isFlatEmpty [-1, 0, 0.8, 1, 0, false, objNull];
+_result = _pos_rnd isFlatEmpty [-1, -1, 0.5, 20, 0, false, objNull];
 _roadSegments = _pos_rnd nearRoads 50;
 
 // && ([surfaceType _pos_rnd,"Forest"] call CBA_fnc_find != -1)

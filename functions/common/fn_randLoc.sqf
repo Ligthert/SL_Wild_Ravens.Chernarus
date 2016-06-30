@@ -20,7 +20,11 @@ for "_node" from 1 to ("param_objectives" call BIS_fnc_getParamValue) do {
 
       _savePos = 1;
 
-      _pos_new = [_pos_last, random [800,1000,1200], random 360 ] call BIS_fnc_relPos;
+      if ( _node == 1 ) then {
+        _pos_new = [_pos_last, random [900,1000,1200],(((objStart getRelDir objCenter)-40) + random 40)] call BIS_fnc_relPos;
+      } else {
+        _pos_new = [_pos_last, random [900,1000,1200], random 360 ] call BIS_fnc_relPos;
+      };
 
       {
         if ( (_x distance _pos_new) < 800  ) then { _savePos = 0 };

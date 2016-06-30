@@ -11,9 +11,9 @@ Mission Types:
 - Assassinate HVT in a city (have him walk in the city or in a building)
 - Assassinate Officer in a city (have him patrol the area)
 - Assassinate Officer in a camp (have him with the nice stuff) *
-- Destroy AT camp [next to city, open, hilltop]
-- Destroy AA camp [next to city, open, hilltop]
-- Destroy Mortars camp [next to city, open, hilltop]
+- Destroy AT camp [next to city, open, hilltop] *
+- Destroy AA camp [next to city, open, hilltop] *
+- Destroy Mortars camp [next to city, open, hilltop] <--
 - Destroy Artillery [next to city, open, hilltop]
 - Destroy Anti-Air [next to city, open, hilltop]
 - Destroy Anti-Air artillery [next to city, open, hilltop]

@@ -8,7 +8,7 @@ class EditorData
 	toggles=1;
 	class ItemIDProvider
 	{
-		nextID=19;
+		nextID=24;
 	};
 	class MarkerIDProvider
 	{
@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={1246.5055,411.73605,14035.925};
-		dir[]={0.80344212,-0.39751568,0.44351909};
-		up[]={0.348079,0.91752827,0.19214913};
-		aside[]={0.48333585,-4.0921441e-007,-0.8755722};
+		pos[]={1243.6543,413.32251,14036.228};
+		dir[]={0.8027581,-0.41637954,0.42714712};
+		up[]={0.36764541,0.90912312,0.19562519};
+		aside[]={0.46979508,-3.307141e-007,-0.88291174};
 	};
 };
 binarizationWanted=0;
@@ -176,7 +176,7 @@ class Mission
 {
 	class Intel
 	{
-		briefingName="[SL] Wild Ravens (v0.2)";
+		briefingName="[SL] Wild Ravens (v0.3)";
 		overviewText="Dynamic Campaign in Chernarus";
 		resistanceWest=0;
 		timeOfChanges=1800.0002;
@@ -200,7 +200,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=5;
+		items=10;
 		class Item0
 		{
 			dataType="Group";
@@ -580,6 +580,81 @@ class Mission
 				};
 				nAttributes=1;
 			};
+		};
+		class Item5
+		{
+			dataType="Trigger";
+			position[]={1264.635,397.91806,14054.84};
+			class Attributes
+			{
+				onActivation="player setCaptive true; player setPos (nodes select 1)";
+				sizeA=0;
+				sizeB=0;
+				activationBy="ALPHA";
+			};
+			id=19;
+			type="EmptyDetector";
+			atlOffset=3.0517578e-005;
+		};
+		class Item6
+		{
+			dataType="Trigger";
+			position[]={1261.3879,397.60864,14052.055};
+			class Attributes
+			{
+				onActivation="player setCaptive true; player setPos (nodes select 2)";
+				sizeA=0;
+				sizeB=0;
+				activationBy="BRAVO";
+			};
+			id=20;
+			type="EmptyDetector";
+			atlOffset=0.057006836;
+		};
+		class Item7
+		{
+			dataType="Trigger";
+			position[]={1259.439,397.39856,14050.454};
+			class Attributes
+			{
+				onActivation="player setCaptive true; player setPos (nodes select 3)";
+				sizeA=0;
+				sizeB=0;
+				activationBy="CHARLIE";
+			};
+			id=21;
+			type="EmptyDetector";
+			atlOffset=0.059967041;
+		};
+		class Item8
+		{
+			dataType="Trigger";
+			position[]={1258.23,397.25754,14049.35};
+			class Attributes
+			{
+				onActivation="player setCaptive true; player setPos (nodes select 4)";
+				sizeA=0;
+				sizeB=0;
+				activationBy="DELTA";
+			};
+			id=22;
+			type="EmptyDetector";
+			atlOffset=0.059967041;
+		};
+		class Item9
+		{
+			dataType="Trigger";
+			position[]={1257.089,397.12625,14048.306};
+			class Attributes
+			{
+				onActivation="player setCaptive true; player setPos (nodes select 5)";
+				sizeA=0;
+				sizeB=0;
+				activationBy="ECHO";
+			};
+			id=23;
+			type="EmptyDetector";
+			atlOffset=0.058990479;
 		};
 	};
 };
