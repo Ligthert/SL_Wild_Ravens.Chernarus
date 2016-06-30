@@ -6,6 +6,7 @@ class cfgFunctions
     class common
     {
       class checkPos{};
+      class checkTriggers{};
       class createCityMarker{};
       class createGroup{};
       class createMarker{};
@@ -35,12 +36,29 @@ class Params
     texts[] = {""};
   };
 
+
+  class param_debug
+  {
+    title = "Debug";
+    values[] = {0,1};
+    texts[] = {"No","Yes"};
+    default = 0;
+  };
+
   class param_objectives
   {
     title = "Number of objectives";
     values[] = {1,2,3,4,5,6,7,8,9};
     default = 5;
   }
+
+  class param_objective_size
+  {
+    title = "Objetive intel";
+    values[] = {"1","250","750","1000"};
+    texts[] = {"On the spot","Precise enough.","Drunken locals tell us everything.","We have no intel and had to resort to darts and a map."};
+    default = 750;
+  };
 
   class param_starting_time
   {
@@ -69,7 +87,7 @@ class Params
 
   class param_qrf
   {
-    title = "QRF (not implemented)";
+    title = "Enemy QRF (not implemented)";
     values[] = {0,1,2,3,4};
     texts[] = {"Off","Light","Medium","Heavy","Fuck your FPS"};
     default = 1;
@@ -78,8 +96,8 @@ class Params
   class param_patrols
   {
     title = "Enemy Patrols";
-    values[] = {0,1};
-    texts[] = {"No", "Yes"};
+    values[] = {0,1,2,3};
+    texts[] = {"No", "Infantry Only","Infantry and Cars","Infantry, Cars and IFVs"};
     default = 1;
   };
 

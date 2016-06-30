@@ -7,7 +7,7 @@ _pos = _this select 0;
 _players = count allPlayers;
 _divider =  _players/("param_enemy_scaling" call BIS_fnc_getParamValue);
 _groups = ceil( _divider );
-_size = _groups * 100;
+_size = _groups * 75;
 
 _marker = [format["%1",random 9999], _pos, "ELLIPSE", [_size,_size] ] call CBA_fnc_createMarker;
 //_marker setMarkerAlpha 0;

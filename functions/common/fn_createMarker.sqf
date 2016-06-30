@@ -2,7 +2,8 @@ private ["_pos","_marker","_size"];
 
 _pos 	= _this select 0;
 
-_size 	= 500 + random 250;
+//_size 	= 500 + random 250;
+_size = "param_objective_size" call BIS_fnc_getParamValue;
 
 _pos = [_pos, random ( _size * 0.9 ), random 360] call BIS_fnc_relPos;
 
